@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Intro to Event-driven architecture</title>
+    <meta name="author" content="Jørn Ølmheim">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!--<link rel="stylesheet" href="dist/reset.css">-->
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="lib/css/equinor.css" id="theme">
+
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img class="logo" src="images/equinor_logo.png" alt="Equinor Logo"/>
+          <!--<h1>Event-driven architecture</h1>-->
+          <img style="float-left" src="images/event-driven-architecture.png" width="500" alt="Title image"/>
+        </section>
+
+        <!--
+        <section>
+          <h2>Who am I?</h2>
+          <p style="text-align: center">
+            Jørn Ølmheim, TDI EDT EDP Data Management Analytics and Architecture
+          </p>
+          <ul>
+            <li>More than 20 years experience</li>
+            <li>Software craftsman</li>
+            <li>Polyglot programmer</li>
+            <li>Enterprise Data Architect</li>
+            <li>Leading advisor Data Architecture</li>
+          </ul>
+          <br/><br/>
+          <img src="images/joe_avatar.jpg" height="100" alt="My image"/>
+        </section>
+        -->
+
+        <section>
+          <section>
+            <h2>Software architecture is <span class="highlight">trade-offs</span></h2>
+          </section>
+
+          <section>
+            <img src="images/trade-offs-good.jpg" alt="Trade off are good"/>
+          </section>
+
+          <section>
+            <h2>Coupling and cohesion</h2>
+            <p>In software design we want to achieve loose coupling and high cohesion</p>
+            <p class="fragment">...sometimes</p>
+          </section>
+
+          <section>
+            <h2>Loose coupling and high cohesion</h2>
+            <p>Means that modules should</p>
+            <ul>
+              <li>be independent of each other</li>
+              <li>have a single purpose</li>
+              <li>have a well defined interface</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Tight vs loose coupling</h2>
+            <img src="images/coupling.png" width="800" alt="Tight vs loose coupling"/>
+          </section>
+
+          <section>
+            <h2>Communication in distributed systems</h2>
+            <h3>Synchronous vs asynchronous</h3>
+          </section>
+
+          <section>
+            <h2>Communication in distributed systems</h2>
+            <img src="images/synchronous-vs-asynchronous.jpg" width="500" alt="Synchronous vs asyncrhonous"/>
+          </section>
+
+          <section>
+            <h2>What is an Event?</h2>
+            <p class="fragment fade-in-then-out">In business terms: Actions of interest that occur at distinct points in time</p>
+            <p class="fragment fade-up">In software: Simply a message sent between two system components or services.</p>
+            <p class="fragment fade-up">It has a spesific type and can contain information that is passed to the other component.</p>
+          </section>
+
+          <section>
+            <h2>Batch vs Stream processing</h2>
+            <img src="images/batch-vs-stream-processing.png" height="200" alt="Batch vs Stream processing"/>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Event-driven architecture</h1>
+          </section>
+
+          <section>
+            <h2>Reference model</h2>
+            <img src="images/event-driven-architecture-reference-model.png" height="400" alt="Event-driven architecture reference model"/>
+          </section>
+
+          <section>
+            <h2>Message brokers</h2>
+            <img src="images/message-broker-diagram1.svg" height="400" alt="Message broker"/>
+          </section>
+
+          <section>
+            <h2>IoT use case</h2>
+            <img src="images/message-broker2.png" height="400" alt="IoT Message broker"/>
+          </section>
+
+          <section>
+            <h2>Azure Event Hub</h2>
+            <img src="images/azure-event-hub.png" height="400" alt="Azure Event Hub"/>
+          </section>
+
+          <section>
+            <h2>Apache Kafka</h2>
+            <img src="images/apache-kafka.png" height="400" alt="Apache Kafka"/>
+          </section>
+
+          <section>
+            <h2>Command Query Responsibility Segregation</h2>
+            <img src="images/cqrs.png" height="400" alt="Command Query Responsibility Segregation"/>
+          </section>
+
+          <section>
+            <h2>Event sourcing</h2>
+            <img src="images/event-sourcing.png" height="400" alt="Event Sourcing"/>
+          </section>
+
+          <section>
+            <!--<h2>Microservices with CQRS and ES</h2>-->
+            <img src="images/microservices-cqrs-event-sourcing.png" height="450" alt="Microservice architecture with CQRS and event sourcing"/>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Event storming</h2>
+            <img src="images/event-storming.png" height="250" alt="Event storming board"/>
+          </section>
+
+          <section>
+            <img src="images/event-storming2.png" height="600" alt="Event storming explained"/>
+          </section>
+
+          <section>
+            <img src="images/event-storming-quote.png" height="200" alt="Quote from Alberto Brandolini"/>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>
